@@ -103,6 +103,11 @@ inject(function ($) {
                 postLink = postLink + '/' + id;
             }
 
+            if (id > 0) {
+                timeline = "/posts/" + id + "/timeline";
+                self.append("<span class='lsep'>|</span><a href='" + timeline + "'>timeline</a>");
+            }
+
             self.append("<span class='lsep'>|</span><a href='" + revisions + "'>history</a>")
                 .find('a').each(function () {
                     var nodes = this.childNodes, i;
